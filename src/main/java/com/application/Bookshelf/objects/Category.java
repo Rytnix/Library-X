@@ -3,6 +3,7 @@ package com.application.Bookshelf.objects;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -12,23 +13,25 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
-@Table(name = "catagories")
-public class Catagory {
+@Table(name = "categories")
+@Repository
+public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name" , length = 250 , nullable = false , unique = true)
+    @Column(name = "name" , length = 50 , nullable = false , unique = true)
     private String name;
 
-    public Catagory( String name) {
+    public Category(String name) {
         this.name = name;
     }
 
 
-    @ManyToMany(mappedBy = "catagories",cascade = CascadeType.ALL)
-    private Set<Book> books = new HashSet<>();
+
+    @ManyToMany(mappedBy = "categories",cascade = CascadeType.ALL)
+    private Set<Book> books = new HashSet<Book>();
 
 
 }

@@ -24,13 +24,11 @@ public void createBook(Book book){
     bookRepository.save(book);
 }
 public void deleteBook(Long id){
-    Book book;
-    book = bookRepository.findById(id).orElseThrow(() -> new RuntimeException("Book not found"));
+    Book book =bookRepository.findById(id).orElseThrow(() -> new RuntimeException("Book not found"));
 
     bookRepository.deleteById(book.getId());
 }
-public void updateBook(Long id){
-    Book book;
-    book = bookRepository.findById(id).orElseThrow(() -> new RuntimeException("book not found"));
+public void updateBook(Book book){
+   bookRepository.save(book) ;
 }
 }

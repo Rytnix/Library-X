@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" xmlns:th="https://www.thymeleaf.org">
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8">
     <title>STACK-XP | Book Management </title>
-    <!-- <link rel="stylesheet" href="../../static/custom/css/style.css">
-    -->
-    <link href="../../static/custom1/css/style.css" th:href="@{/custom/css/style.css}" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
   </head>
   <body>
     <div class="header">
@@ -14,14 +13,14 @@
 
             <div class="navbar">
                 <div class="logo">
-                    <img src="../../static/custom1/images/logo.png" th:src="@{/custom/images/logo.png}" width="115px" alt="">
+                    <img src="images/logo.png"  width="115px" alt="">
 
                 </div>
                 <nav>
                   <ul>
                     <li><a href="" class="line">Home</a></li>
-                    <li><a href=""class="line">Books</a></li>
-                    <li><a href=""class="line">Catagories</a></li>
+                    <li><a href="/books"class="line">Books</a></li>
+                    <li><a href="/category"class="line">Catagories</a></li>
                     <li><a href=""class="line">Authors</a></li>
                     <li><a href=""class="line">Publisher</a></li>
                     <li><a href=""class="line">Login</a></li>
@@ -34,10 +33,10 @@
                 <div class="column-2">
                   <h1>Enhance Your Management with<br>LIBRARY-X!</h1>
                   <p>A books Management console for reducing costs and<br>manpower.</p>
-                  <a href="" class="btn"> Explore Now &#8594;</a>
+                  <a href="/support" class="btn"> Support the creator &#8594;</a>
                 </div>
                 <div class="column-2">
-                       <img hrc="../../static/custom/images/2.png" th:src="@{/custom/images/2.png}" alt="">
+                       <img src="images/2.png" alt="">
                 </div>
               </div>
    </div>

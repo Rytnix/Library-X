@@ -19,8 +19,7 @@ public class AuthorService {
     }
 
     public Author findAuthorById(Long id){
-  Author author;
-  author = authorRepository.findById(id).orElseThrow(() -> new RuntimeException("Author not found"));
+  Author author = authorRepository.findById(id).orElseThrow(() -> new RuntimeException("Author not found"));
   return author;
     }
 
@@ -29,8 +28,7 @@ public class AuthorService {
     }
 
     public void removeAuthor(Long id){
-        Author author;
-        author = authorRepository.findById(id).orElseThrow(() -> new RuntimeException("Author not found"));
+        Author author = authorRepository.findById(id).orElseThrow(() -> new RuntimeException("Author not found"));
         authorRepository.delete(author);
 
     }

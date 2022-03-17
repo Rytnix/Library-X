@@ -12,7 +12,7 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "book")
+@Table(name = "books")
 public class Book {
 
     @Id
@@ -38,14 +38,14 @@ public class Book {
     @JoinTable(name = "books_authors",
             joinColumns = {@JoinColumn(name = "book_id")},
             inverseJoinColumns = {@JoinColumn(name = "author_id")})
-    private Set<Author> authors = new HashSet<>();
+    private Set<Author> authors = new HashSet<Author>();
 
 
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "book_catagories" ,
+    @JoinTable(name = "book_categories" ,
             joinColumns = {@JoinColumn(name = "book_id")} ,
-            inverseJoinColumns = {@JoinColumn(name = "catagory_id")})
-    private Set<Catagory> catagories = new HashSet<>();
+            inverseJoinColumns = {@JoinColumn(name = "category_id")})
+    private Set<Category> categories = new HashSet<Category>();
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "book_publisher" ,
@@ -75,14 +75,14 @@ public void addAuthor(Author author){
     author.getBooks().add(this);
 }
 
-public void removeCatagory(Catagory catagory){
-    this.catagories.remove(catagory);
-    catagory.getBooks().remove(catagory);
+public void removeCategory(Category category){
+    this.categories.remove(category);
+    category.getBooks().remove(category);
 
 }
-public void addCatagory(Catagory catagory){
-    this.catagories.add(catagory);
-    catagory.getBooks().add(this);
+public void addCategory(Category category){
+    this.categories.add(category);
+    category.getBooks().add(this);
 }
 
 }

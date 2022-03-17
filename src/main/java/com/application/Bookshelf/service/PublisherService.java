@@ -20,8 +20,7 @@ public class PublisherService {
     }
 
     public Publisher findPublisherById(Long id){
-        Publisher publisher ;
-        publisher = publisherRepository.findById(id).orElseThrow(() -> new RuntimeException("Publisher not found"));
+        Publisher publisher = publisherRepository.findById(id).orElseThrow(() -> new RuntimeException("Publisher not found"));
 
         return publisher;
     }
@@ -29,10 +28,13 @@ public class PublisherService {
     public void addPublisher(Publisher publisher){
         publisherRepository.save(publisher);
     }
+    public void updatePublisher(Publisher publisher){
+        publisherRepository.save(publisher);
+    }
 
     public void removePublisher(Long id){
-        Publisher publisher;
-        publisher = publisherRepository.findById(id).orElseThrow(() -> new RuntimeException("Publisher not found"));
+        Publisher publisher= publisherRepository.findById(id).orElseThrow(() -> new RuntimeException("Publisher not found"));
+publisherRepository.deleteById(publisher.getId());
     }
 
 }
