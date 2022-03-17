@@ -2,7 +2,6 @@ package com.application.Bookshelf.controller;
 
 import com.application.Bookshelf.objects.Category;
 import com.application.Bookshelf.service.CategoryService;
-import org.apache.catalina.startup.CatalinaBaseConfigurationSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
