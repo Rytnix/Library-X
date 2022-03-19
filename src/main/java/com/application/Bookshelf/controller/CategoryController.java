@@ -17,20 +17,16 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @GetMapping("/category")
-    public String showCategory(Model model){
 
-        model.addAttribute("categories",categoryService.findAllCategories());
-
+    public String showCategory(Model model)
+    { model.addAttribute("categories",categoryService.findAllCategories());
         return "categories";
-
     }
+
     @GetMapping("/update-category/{id}")
-    public String updateCatagory(@PathVariable Long id, Model model){
-        Category category = categoryService.findCategoryById(id);
-
+    public String updateCatagory(@PathVariable Long id, Model model)
+    { Category category = categoryService.findCategoryById(id);
         model.addAttribute("category" , categoryService.findAllCategories());
-
         return "update-category";
     }
-
 }

@@ -14,7 +14,7 @@
 	<name>Bookshelf</name>
 	<description>project for Spring Boot</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11.0.13</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -69,6 +69,19 @@
 					</excludes>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<release>11</release>  <!--or <release>10</release>-->
+				</configuration>
+			</plugin>
+
+
+
+
 		</plugins>
 	</build>
 	<repositories>
