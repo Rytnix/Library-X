@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'stackxp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0BFD0861BCBB4387BE2DC8DD1804FDCE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5D7086B2E1B445A385F4C21AF2ECC020 }}
           package: '*.jar'
