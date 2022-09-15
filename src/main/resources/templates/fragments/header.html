@@ -1,0 +1,31 @@
+<!DOCTYPE htmlxmlns:th="http://www.thymeleaf.org" >
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Library-X | Books</title>
+    <link rel="stylesheet"  th:href="@{/css/style.css}">
+</head>
+<body>
+<nav th:fragment="header">
+    <div class="navbar">
+        <div class="logo">
+            <img  th:src="@{/images/logo.png}" width="115px" alt="">
+
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index" class="line">Home</a></li>
+                <li><a href="/category"class="line">Catagories</a></li>
+                <li><a href=""class="line">Authors</a></li>
+                <li><a href=""class="line">Publisher</a></li>
+                <li><a href=""class="line">Login</a></li>
+                <li><a href="" class="line">Register</a></li>
+            </ul>
+        </nav>
+
+
+    </div>
+</nav>
+
+</body>
+</html>
